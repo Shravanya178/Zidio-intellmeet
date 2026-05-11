@@ -15,7 +15,6 @@ export default function RegisterPage() {
   })
   const [loading, setLoading] = useState(false)
 
-  // Configuration de la mutation
   const registerMutation = useMutation({
     mutationFn: authService.register,
     onSuccess: (data) => {
@@ -35,7 +34,6 @@ export default function RegisterPage() {
       return
     }
 
-    // Appel au backend (mapping de fullName vers name pour le backend)
     registerMutation.mutate({
       name: formData.fullName,
       email: formData.email,
@@ -76,7 +74,6 @@ export default function RegisterPage() {
           />
         </div>
 
-        {/* Email */}
         <div className="flex flex-col gap-1.5">
           <label className="text-sm font-medium text-foreground">
             Email address
@@ -92,7 +89,6 @@ export default function RegisterPage() {
           />
         </div>
 
-        {/* Password */}
         <div className="flex flex-col gap-1.5">
           <label className="text-sm font-medium text-foreground">
             Password
@@ -108,7 +104,6 @@ export default function RegisterPage() {
           />
         </div>
 
-        {/* Confirm Password */}
         <div className="flex flex-col gap-1.5">
           <label className="text-sm font-medium text-foreground">
             Confirm Password

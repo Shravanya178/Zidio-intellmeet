@@ -24,7 +24,7 @@ export default function LoginPage() {
     },
     onError: (error) => {
       console.error("Login failed", error);
-      // Ici, vous pourriez ajouter un toast de notification
+
     }
   });
 

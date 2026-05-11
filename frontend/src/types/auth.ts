@@ -7,7 +7,7 @@ export interface AuthResponse {
 
 export interface LoginCredentials {
   email: string;
-  password?: string; // Optionnel si on utilise uniquement Google par exemple
+  password?: string;
 }
 
 export interface RegisterCredentials extends LoginCredentials {
