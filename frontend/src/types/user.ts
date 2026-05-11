@@ -1,0 +1,13 @@
+export type UserRole = 'admin' | 'user' | 'guest';
+
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+  role: UserRole;
+  avatarUrl?: string;
+  bio?: string;
+  oauthProvider?: string;
+  oauthId?: string;
+  tokenVersion: number; 
+}
