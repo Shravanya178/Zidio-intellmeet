@@ -16,7 +16,7 @@
     --popover-foreground: oklch(0.145 0 0);
 
     /* Vert -> Bleu */
-    --primary: oklch(0.527 0.154 250);
+    --primary: oklch(35.252% 0.19557 276.933);
     --primary-foreground: oklch(0.982 0.018 250);
 
     --secondary: oklch(0.967 0.001 286.375);
@@ -94,7 +94,7 @@
     --chart-5: oklch(0.448 0.119 252);
 
     /* Sidebar */
-    --sidebar: oklch(0.205 0 0);
+    --sidebar: oklch(20.463% 0.00002 271.152);
     --sidebar-foreground: oklch(0.985 0 0);
 
     --sidebar-primary: oklch(0.723 0.219 245);
@@ -107,7 +107,7 @@
     --sidebar-ring: oklch(0.556 0 0);
   }
 
-  .theme {
+  :root {
     --font-sans: 'Inter Variable', sans-serif;
     --font-heading: var(--font-sans);
   }
@@ -120,6 +120,12 @@
     background-color: var(--background);
     color: var(--foreground);
     font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   button:not(:disabled),
