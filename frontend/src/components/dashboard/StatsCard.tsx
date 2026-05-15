@@ -1,28 +1,24 @@
-import { ArrowUpRight } from "lucide-react";
-import React from "react";
+import { TrendingUp } from 'lucide-react'
 
 interface StatsCardProps {
-  label: string;
-  value: string;
-  detail: string;
-  icon: React.ReactNode;
-  trend?: 'up' | 'down' | 'neutral';
+  label: string
+  value: string
+  detail: string
+  icon: React.ReactNode
 }
 
 export function StatsCard({ label, value, detail, icon }: StatsCardProps) {
   return (
-    <div className="bg-card p-6 rounded-xl border border-border shadow-sm hover:border-primary/50 transition-colors group">
-      <div className="flex justify-between items-start">
-        <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+    <div className="bg-card p-5 rounded-2xl border border-border hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 transition-all duration-200 group">
+      <div className="flex items-start justify-between mb-4">
+        <div className="p-2.5 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
           {icon}
         </div>
-        <ArrowUpRight size={16} className="text-muted-foreground" />
+        <TrendingUp size={14} className="text-muted-foreground/40 group-hover:text-primary/60 transition-colors" />
       </div>
-      <div className="mt-4">
-        <p className="text-sm font-medium text-muted-foreground">{label}</p>
-        <h3 className="text-2xl font-bold text-foreground mt-1">{value}</h3>
-        <p className="text-xs text-primary mt-1 font-medium">{detail}</p>
-      </div>
+      <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">{label}</p>
+      <h3 className="text-2xl font-bold text-foreground mt-1 tracking-tight">{value}</h3>
+      <p className="text-xs text-primary font-medium mt-1.5">{detail}</p>
     </div>
-  );
+  )
 }
